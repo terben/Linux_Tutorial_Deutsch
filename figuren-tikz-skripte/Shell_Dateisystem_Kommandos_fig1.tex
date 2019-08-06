@@ -4,10 +4,10 @@
 \usetikzlibrary{trees}
 
 \begin{document}
-\tikzstyle{every node}=[anchor=west,minimum width={2.2cm},font=\normalsize]
-\tikzstyle{folder}=[draw=black,thick]
-\tikzstyle{selected}=[draw=red,fill=red!30]
-\tikzstyle{optional}=[dashed,fill=gray!50]
+\tikzstyle{every node}=[anchor=west,font=\normalsize]
+\tikzstyle{folder}=[draw=black,thick,minimum width={2.2cm}]
+\tikzstyle{selected}=[draw=red,fill=red!30,minimum width={2.2cm}]
+\tikzstyle{optional}=[dashed,fill=gray!50,minimum width={2.2cm}]
 \begin{tikzpicture}[%
   grow via three points={one child at (0.5,-0.7) and
   two children at (0.5,-0.7) and (0.5,-1.4)},
@@ -16,7 +16,9 @@
     child { node [folder] {bin}
       child { node {ls}}
       child { node {cp}}
+      child { node {\dots}}
     }
+    child [missing] {}
     child [missing] {}
     child [missing] {}
     child { node [folder] {dev}}
