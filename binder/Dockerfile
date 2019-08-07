@@ -139,6 +139,7 @@ RUN test -f binder/apt.txt && apt-get -qq update && \
 # but not from conda:
 RUN test -f binder/requirements.txt && \
   pip install --no-cache-dir -r binder/requirements.txt
+RUN python3 -m bash_kernel.install
 
 # Add start script
 # Add entrypoint
