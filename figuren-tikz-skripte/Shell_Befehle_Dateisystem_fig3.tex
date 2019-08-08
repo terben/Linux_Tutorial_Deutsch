@@ -1,0 +1,41 @@
+\documentclass[class=scrreprt,11pt]{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\begin{document}
+\tikzstyle{every node}=[anchor=west,minimum width={2.2cm},font=\normalsize]
+\tikzstyle{folder}=[draw=black,thick]
+\tikzstyle{selected}=[draw=red,fill=red!30]
+\tikzstyle{optional}=[dashed,fill=gray!50]
+\begin{tikzpicture}[%
+  grow via three points={one child at (0.5,-0.7) and
+  two children at (0.5,-0.7) and (0.5,-1.4)},
+  edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+  \node [folder] {/home}
+    child { node [folder] {annika}
+      child { node [folder] {backup}}
+      child { node [folder] {thesis}
+        child { node [folder] {daten}}
+        child { node [folder] {figuren}}
+        child { node [folder] {tex-dateien}}
+      }
+    }
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child { node [folder] {oliver}
+      child { node [folder] {backup}}
+      child { node [folder] {daten}
+        child { node [folder] {01-10-2019}}
+        child { node [folder] {02-10-2019}}
+      }
+    }
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child { node [folder] {thomas}};
+\end{tikzpicture}
+\end{document}
