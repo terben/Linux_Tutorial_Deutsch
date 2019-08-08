@@ -40,21 +40,15 @@ RUN adduser --disabled-password \
     --uid 1000 \
     ${NB_USER}
 
-RUN passwd -d ${NB_USER}
-
 RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid 1001 \
     oliver
 
-RUN passwd -d oliver
-
 RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid  1002 \
     thomas
-
-RUN passwd -d thomas
 
 RUN wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key |  apt-key add - && \
     DISTRO="bionic" && \
@@ -145,7 +139,10 @@ RUN test -f binder/apt.txt && apt-get -qq update && \
 # but not from conda:
 RUN test -f binder/requirements.txt && \
   pip install --no-cache-dir -r binder/requirements.txt
-RUN python3 -m bash_kernel.install
+
+# uncomment the following line if you want to use bash_kernel
+# instead of calysto_bash
+# RUN python3 -m bash_kernel.install
 
 # Add start script
 # Add entrypoint

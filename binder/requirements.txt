@@ -1,2 +1,10 @@
-#calysto_bash
-bash_kernel
+# You can choose between calysto_bash and bash_kernel.
+# I found calysto_bash better if you need to interrupt
+# a kernel session. bash_kernel sometimes was unresponsive
+# to interrups. Ob the other hand, it has better warning
+# messages if some program cannot run in the limited notebook
+# cells.
+#
+# I do not install both to not confuse users.
+calysto_bash
+#bash_kernel
