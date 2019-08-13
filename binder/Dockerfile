@@ -154,7 +154,7 @@ USER ${NB_USER}
 
 # remove unnecessary files within the docker:
 RUN rm -rf binder
-RUM rm -rf figuren-tikz-skripte
+RUN rm -rf figuren-tikz-skripte
 RUN rm README.md
 
 ENTRYPOINT ["/usr/local/bin/repo2docker-entrypoint"]
