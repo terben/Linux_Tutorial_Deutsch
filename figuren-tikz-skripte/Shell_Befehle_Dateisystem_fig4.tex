@@ -5,9 +5,9 @@
 \begin{document}
 \tikzstyle{every node}=[anchor=west,minimum width={2.2cm},font=\normalsize]
 \tikzstyle{folder}=[draw=black,thick]
-\tikzstyle{selected}=[draw=red,fill=red!30]
-\tikzstyle{root}=[draw=green,fill=green!30]
-\tikzstyle{optional}=[dashed,fill=gray!50]
+\tikzstyle{selected}=[draw=red,thick,fill=red!30]
+\tikzstyle{root}=[draw=green,thick,fill=green!30]
+\tikzstyle{optional}=[dashed,thick,fill=gray!50]
 \begin{tikzpicture}[%
   grow via three points={one child at (0.5,-0.7) and
   two children at (0.5,-0.7) and (0.5,-1.4)},
@@ -25,5 +25,9 @@
     child [missing] {}
     child[edge from parent/.style={draw,very thick}] { node [folder] {figuren}}
     child[edge from parent/.style={draw,very thick}] { node {\dots}};
+  %
+  \node[anchor=center,align=center,yshift=2em]
+      at (current bounding box.north)
+      {Im Verzeichnisbaum nach \textit{unten} \\ gehen};
 \end{tikzpicture}
 \end{document}
