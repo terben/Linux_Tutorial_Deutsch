@@ -21,4 +21,5 @@ done
 
 # Zwei Figuren zur Verzechnisbaum-Navigation zusammenfuegen:
 convert Shell_Befehle_Dateisystem_fig4.png \
-        Shell_Befehle_Dateisystem_fig5.png +append Verzeichnis_Navigation.png
+        Shell_Befehle_Dateisystem_fig5.png \
+	+append Shell_Befehle_Dateisystem_fig4_und_5.png 
