@@ -16,3 +16,9 @@ do
   rm ${BASE}.log
   rm ${BASE}.pdf
 done
+
+# Spezielle Nachbereitung von Figuren:
+
+# Zwei Figuren zur Verzechnisbaum-Navigation zusammenfuegen:
+convert Shell_Befehle_Dateisystem_fig4.png \
+        Shell_Befehle_Dateisystem_fig5.png +append Verzeichnis_Navigation.png
