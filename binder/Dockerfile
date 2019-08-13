@@ -152,8 +152,10 @@ RUN chmod 755 /usr/local/bin/repo2docker-entrypoint
 # We always want containers to run as non-root but as NB_USER:
 USER ${NB_USER}
 
-# remove the binder-folder within the docker:
+# remove unnecessary files within the docker:
 RUN rm -rf binder
+RUM rm -rf figuren-tikz-skripte
+RUN rm README.md
 
 ENTRYPOINT ["/usr/local/bin/repo2docker-entrypoint"]
 
