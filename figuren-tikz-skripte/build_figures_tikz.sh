@@ -9,8 +9,8 @@ do
 
   BASE=$(basename ${FILE} .tex)
 
-  convert -density 600x600 -flatten ${BASE}.pdf \
-          -quality 90 -resize 800x600 ${BASE}.png
+  convert -density 600 -flatten ${BASE}.pdf \
+          -quality 100 ${BASE}.png
 
   rm ${BASE}.aux
   rm ${BASE}.log
