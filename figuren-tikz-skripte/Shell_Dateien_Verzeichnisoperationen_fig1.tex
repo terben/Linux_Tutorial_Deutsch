@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{stackengine}
+\usetikzlibrary{positioning,shapes.symbols}
+%
+\newcommand{\caret}{\symbol{94}}
+%
+\begin{document}
+
+\begin{tikzpicture}
+  \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=5cm]{figuren/nano}};
+  %
+  \begin{scope}[x={(image.south east)},y={(image.north west)}]
+    %\draw[help lines, very thin, step=0.02] (0,0) grid (1,1);
+    %\draw[help lines,thin,xstep=.1,ystep=.1] (0,0) grid (1,1);
+    %\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+    %\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+    \node[fill = blue!10, font=\tiny, anchor=west] (Control) at (0.00, -0.1) {\caret G = Control-G};
+    \draw[blue, thick] (0.0, 0.04) rectangle (0.16, 0.12);
+    \draw[-latex, blue, thick] (Control) to (0.08, 0.04);
+  \end{scope}
+\end{tikzpicture}
+
+\end{document}
