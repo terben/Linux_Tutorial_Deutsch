@@ -23,3 +23,8 @@ done
 convert Shell_Befehle_Dateisystem_fig4.png \
         Shell_Befehle_Dateisystem_fig5.png \
 	+append Shell_Befehle_Dateisystem_fig4_und_5.png 
+
+# Zwei Figuren fuer Verstaendnisfragen zu Lektion 3:
+convert Shell_Dateien_Verzeichnisoperationen_fig3.png \
+        Shell_Dateien_Verzeichnisoperationen_fig4.png \
+	+append Shell_Dateien_Verzeichnisoperationen_fig3_und_4.png 

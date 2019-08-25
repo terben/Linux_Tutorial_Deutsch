@@ -1,0 +1,65 @@
+\documentclass[class=scrreprt,11pt]{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+\tikzstyle{every node}=[anchor=west,minimum width={2.2cm},font=\normalsize]
+\tikzstyle{folder}=[draw=black,thick]
+\tikzstyle{selected}=[draw=red,fill=red!30]
+\tikzstyle{optional}=[dashed,fill=gray!50]
+\begin{tikzpicture}[%
+  grow via three points={one child at (0.5,-0.7) and
+  two children at (0.5,-0.7) and (0.5,-1.4)},
+  edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+  \node [folder] {Analysen\_Mai\_bis\_Juli}
+    child { node {Data\_01\_05\_19.txt\dots Data\_31\_05\_19.txt}}
+    child { node {Calib\_01\_05\_19.txt\dots Calib\_31\_05\_19.txt}}
+    child { node {Data\_01\_06\_19.txt\dots Data\_30\_06\_19.txt}}
+    child { node {Calib\_01\_06\_19.txt\dots Calib\_30\_06\_19.txt}}
+    child { node {Data\_01\_07\_19.txt\dots Data\_31\_07\_19.txt}}
+    child { node {Calib\_01\_07\_19.txt\dots Calib\_31\_07\_19.txt}}
+%      child { node [selected] {processed}}
+%      child { node [selected] {raw}}
+%    }
+%    child [missing] {}
+%    child [missing] {}
+    child { node [folder] {backup}
+      child { node [folder] {Data}
+      	child { node {Data\_01\_05\_19.txt\dots Data\_31\_05\_19.txt}}
+      	child { node {Data\_01\_06\_19.txt\dots Data\_30\_06\_19.txt}}
+      	child { node {Data\_01\_07\_19.txt\dots Data\_31\_07\_19.txt}}
+      }
+      child [missing] {}
+      child [missing] {}
+      child [missing] {}
+      child { node [folder] {Calib}
+      	child { node {Calib\_01\_05\_19.txt\dots Calib\_31\_05\_19.txt}}
+        child { node {Calib\_01\_06\_19.txt\dots Calib\_30\_06\_19.txt}}
+        child { node {Calib\_01\_07\_19.txt\dots Calib\_31\_07\_19.txt}}
+      }
+    }
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}
+    child { node [folder] {fuer\_Thomas}
+      child { node [folder] {Data\_jeder\_13te}
+      	child { node {Data\_13\_05\_19.txt}}
+      	child { node {Data\_13\_06\_19.txt}}
+      	child { node {Data\_13\_07\_19.txt}}
+      }
+    child [missing] {}
+    child [missing] {}
+    child [missing] {}  
+    child { node [folder] {Alles\_Juni}
+    	child { node {Data\_01\_06\_19.txt\dots Data\_30\_06\_19.txt}}
+    	child { node {Calib\_01\_06\_19.txt\dots Calib\_30\_06\_19.txt}}
+    }	
+    };
+\end{tikzpicture}
+\end{document}
