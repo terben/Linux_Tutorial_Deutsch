@@ -36,16 +36,19 @@ ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
 RUN adduser --disabled-password \
+    --ingroup users \
     --gecos "Default user" \
     --uid 1000 \
     ${NB_USER}
 
 RUN adduser --disabled-password \
+    --ingroup users \
     --gecos "Default user" \
     --uid 1001 \
     oliver
 
 RUN adduser --disabled-password \
+    --ingroup users \
     --gecos "Default user" \
     --uid  1002 \
     thomas
