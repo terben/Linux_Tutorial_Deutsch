@@ -39,22 +39,19 @@ RUN adduser --disabled-password \
     --ingroup users \
     --gecos "Default user" \
     --uid 1000 \
-    ${NB_USER}
-RUN gpasswd -d annika root    
+    ${NB_USER}   
 
 RUN adduser --disabled-password \
     --ingroup users \
     --gecos "Default user" \
     --uid 1001 \
     oliver
-RUN gpasswd -d oliver root     
 
 RUN adduser --disabled-password \
     --ingroup users \
     --gecos "Default user" \
     --uid  1002 \
     thomas
-RUN gpasswd -d thomas root 
 
 RUN wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key |  apt-key add - && \
     DISTRO="bionic" && \
@@ -162,6 +159,11 @@ USER ${NB_USER}
 RUN rm -rf binder
 RUN rm -rf figuren-tikz-skripte
 RUN rm README.md
+
+# remove group root from users:
+RUN gpasswd -d annika root
+RUN gpasswd -d oliver root  
+RUN gpasswd -d thomas root  
 
 ENTRYPOINT ["/usr/local/bin/repo2docker-entrypoint"]
 
