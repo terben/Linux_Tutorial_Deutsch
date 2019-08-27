@@ -89,7 +89,7 @@ COPY binder/activate-conda.sh /etc/profile.d/activate-conda.sh
 COPY binder/environment.frozen.yml /tmp/environment.yml
 
 RUN mkdir -p ${NPM_DIR} && \
-chown -R ${NB_USER}:${NB_USER} ${NPM_DIR}
+chown -R ${NB_USER}:users ${NPM_DIR}
 
 USER ${NB_USER}
 RUN npm config --global set prefix ${NPM_DIR}
@@ -119,7 +119,7 @@ ENV PATH ${HOME}/.local/bin:${REPO_DIR}/.local/bin:${PATH}
 # you can't actually copy as USER, only as root! Thanks, Docker!
 USER root
 COPY . ${REPO_DIR}
-RUN chown -R ${NB_USER}:${NB_USER} ${REPO_DIR}
+RUN chown -R ${NB_USER}:users ${REPO_DIR}
 
 # fix the BUG in Ubuntu bionic image
 RUN sed -i '/path-exclude=\/usr\/share\/man\/*/c\#path-exclude=\/usr\/share\/man\/*' /etc/dpkg/dpkg.cfg.d/excludes && \
