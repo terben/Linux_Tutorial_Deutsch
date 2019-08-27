@@ -152,11 +152,6 @@ RUN test -f binder/requirements.txt && \
 COPY binder/repo2docker-entrypoint /usr/local/bin/repo2docker-entrypoint
 RUN chmod 755 /usr/local/bin/repo2docker-entrypoint
 
-# remove group root from users:
-RUN gpasswd -d annika root
-RUN gpasswd -d oliver root  
-RUN gpasswd -d thomas root  
-
 # We always want containers to run as non-root but as NB_USER:
 USER ${NB_USER}
 
