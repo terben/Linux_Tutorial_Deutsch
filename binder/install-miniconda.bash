@@ -73,7 +73,7 @@ conda clean -tipsy
 # Remove the big installer so we don't increase docker image size too much
 rm ${INSTALLER_PATH}
 
-chown -R $NB_USER:$NB_USER ${CONDA_DIR}
+chown -R $NB_USER:users ${CONDA_DIR}
 
 conda list -n root
 conda list -p ${NB_PYTHON_PREFIX}
