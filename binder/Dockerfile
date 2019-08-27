@@ -39,19 +39,22 @@ RUN adduser --disabled-password \
     --ingroup users \
     --gecos "Default user" \
     --uid 1000 \
-    ${NB_USER}   
+    ${NB_USER}
+RUN usermod -g users annika    
 
 RUN adduser --disabled-password \
     --ingroup users \
     --gecos "Default user" \
     --uid 1001 \
     oliver
-
+RUN usermod -g users oliver    
+       
 RUN adduser --disabled-password \
     --ingroup users \
     --gecos "Default user" \
     --uid  1002 \
     thomas
+RUN usermod -g users thomas    
 
 RUN wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key |  apt-key add - && \
     DISTRO="bionic" && \
