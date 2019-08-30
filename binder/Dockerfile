@@ -40,21 +40,18 @@ RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid 1000 \
     ${NB_USER}
-#RUN usermod -g users annika
 
 RUN adduser --disabled-password \
     --ingroup users \
     --gecos "Default user" \
     --uid 1001 \
     oliver
-#RUN usermod -g users oliver
 
 RUN adduser --disabled-password \
     --ingroup users \
     --gecos "Default user" \
     --uid  1002 \
     thomas
-#RUN usermod -g users thomas
 
 RUN wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key |  apt-key add - && \
     DISTRO="bionic" && \
@@ -156,7 +153,7 @@ COPY binder/repo2docker-entrypoint /usr/local/bin/repo2docker-entrypoint
 RUN chmod 755 /usr/local/bin/repo2docker-entrypoint
 
 # We always want containers to run as non-root but as NB_USER:
-# USER ${NB_USER}:users
+USER ${NB_USER}:users
 
 # remove unnecessary files within the docker:
 RUN rm -rf binder

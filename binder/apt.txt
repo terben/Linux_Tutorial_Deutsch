@@ -6,4 +6,3 @@ lsb-core
 nano
 vim
 emacs
-gosu
