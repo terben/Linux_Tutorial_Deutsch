@@ -15,16 +15,16 @@
     %\foreach \x in {0,1,...,9} { \node [font=\tiny, anchor=north] at (\x/10,0) {0.\x}; }
     %\foreach \y in {0,1,...,9} { \node [font=\tiny, anchor=east] at (0,\y/10) {0.\y}; }
     \node[fill = blue!10, font=\tiny, align = center] (befehl) at
-    (0.5, -0.5) {Befehlszelle; \\ \texttt{Shift+Enter} um auszuführen};
+    (0.5, -0.6) {Befehlszelle; \\ \texttt{Shift+Enter} um auszuführen};
     \node[fill = red!10, font=\tiny, align = center] (text) at (0.5, 1.5) {Textzelle};
     \node[fill = green!10, font=\tiny, align = center] (befehl-mobil) at (0.18,
-    -1.3) {Befehlszelle ausführen \\ auf mobilen Geräten};
-    \draw[red, thick] (0.08, 0.54) rectangle (0.96, 0.96);
+    -1.4) {Befehlszelle ausführen \\ auf mobilen Geräten};
+    \draw[red, thick] (0.13, 0.54) rectangle (0.93, 0.96);
     \draw[blue, thick] (0.019, 0.08) rectangle (0.99, 0.46);
     \draw[black!30!green, thick] (0.16, 0.17) rectangle (0.19, 0.39);
-    \draw[-latex, blue] (befehl) to (0.5, 0.08);
-    \draw[-latex, red] (text) to (0.5, 0.96);
-    \draw[-latex, black!30!green] (befehl-mobil) to (0.18, 0.17);
+    \draw[-latex, blue, thick] (befehl) to (0.5, 0.08);
+    \draw[-latex, red, thick] (text) to (0.5, 0.96);
+    \draw[-latex, black!30!green, thick] (befehl-mobil) to (0.18, 0.17);
   \end{scope}
 \end{tikzpicture}
 
