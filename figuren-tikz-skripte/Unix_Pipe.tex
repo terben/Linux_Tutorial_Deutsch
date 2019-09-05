@@ -1,4 +1,4 @@
-\documentclass[border=1in]{standalone}
+\documentclass[border=0.05in]{standalone}
 %
 % Figur um Unix-Pipes zu visualisieren
 \usepackage{tikz}
@@ -33,7 +33,7 @@
       (a) {\$};
 \node[commline, color=red, right=0.1cm of a]
       (b) {wc -l *.txt};
-      
+
 \node[boxexp, fill = red, below=0.5cm of b]
       (c) {wc -l *.txt};
 \node[arrowexp,
@@ -62,7 +62,7 @@
       (c1) {\(>\)};
 \node[commline,color = blue, right = 0.1cm of c1]
       (d1) {laengen.txt};
-      
+
 \node[boxexp, fill = red,
       below = 1.0cm of b1]
       (e1) {wc -l *.txt};
@@ -102,11 +102,11 @@
       fill=orange, right=-0.05cm of h2]
       (i2) {in\ };
 \node[boxexp, fill=orange,
-      right=-0.0cm of i2]
+      right=-0.02cm of i2]
       (j2) {sort -n};
 \node[arrowexp, signal to=east, fill=orange,
       right=-0.05cm of j2]
-      (k2) {\ out};            
+      (k2) {\ out};
 \node[arrowexp, signal from=west, signal to=nowhere,
       fill=violet, right=-0.05cm of k2]
       (l2) {in\ };
@@ -115,13 +115,13 @@
       (m2) {head -n 1};
 \node[arrowexp, signal to=east, fill=violet,
       right=-0.05cm of m2]
-      (n2) {\ out};    
+      (n2) {\ out};
 \node[arrowexp, signal from=west, signal to=nowhere,
       fill=black, right=-0.05cm of n2]
       (o2) {};
 \node[boxexp, fill=black,
       right=-0.05cm of o2]
-      {Ausgabe \\ auf \\ Bildschirm };              
-      
+      {Ausgabe \\ auf \\ Bildschirm };
+
 \end{tikzpicture}
 \end{document}
