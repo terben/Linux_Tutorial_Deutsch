@@ -32,10 +32,10 @@
 \path (0,0) node[commline]
       (a) {\$};
 \node[commline, color=red, right=0.1cm of a]
-      (b) {wc -l *.txt};
+      (b) {wc -l *.dat};
 
 \node[boxexp, fill = red, below=0.5cm of b]
-      (c) {wc -l *.txt};
+      (c) {wc -l *.dat};
 \node[arrowexp,
       signal to = east,
       fill = red,
@@ -56,7 +56,7 @@
 \path (0,-3.5) node[commline]
       (a1) {\$};
 \node[commline, color = red, right = 0.1cm of a1]
-      (b1) {wc -l *.txt};
+      (b1) {wc -l *.dat};
 \node[commline, font=\boldmath\LARGE,
       color = black, right = 0.1cm of b1]
       (c1) {\(>\)};
@@ -65,7 +65,7 @@
 
 \node[boxexp, fill = red,
       below = 1.0cm of b1]
-      (e1) {wc -l *.txt};
+      (e1) {wc -l *.dat};
 \node[arrowexp, signal to = east, fill = red,
       right=-0.05cm of e1]
       (f1) {\ out};
@@ -82,7 +82,7 @@
 \path (0,-7.5) node[commline]
       (a2) {\$};
 \node[commline,color=red, right = 0.1cm of a2]
-      (b2) {wc -l *.txt};
+      (b2) {wc -l *.dat};
 \node[commline,right=0.1cm of b2]
       (c2) {\textbar};
 \node[commline,color=orange,right = 0.1cm of c2]
@@ -94,7 +94,7 @@
 
 \node[boxexp, fill = red,
       below=1.0cm of b2]
-      (g2) {wc -l *.txt};
+      (g2) {wc -l *.dat};
 \node[arrowexp, signal to=east, fill=red,
       right=-0.05cm of g2]
       (h2) {\ out};
