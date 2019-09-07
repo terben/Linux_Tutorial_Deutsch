@@ -1,0 +1,9 @@
+500   text_1
+1     text_2
+100   text_3
+10    text_4
+19    text_5
+2     text_6
+22    text_7
+6     text_8
+

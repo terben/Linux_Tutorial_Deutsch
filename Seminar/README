@@ -1,0 +1,15 @@
+Daten für das Astro-Seminar 'Monde der Planeten unseres Sonnensystems'
+======================================================================
+
+- Sie Datei 'Beobachtungsgelegehneiten.txt' enthält mögliche Daten
+  für Beobachtungen der Planeten und ihrer Monde. Die daten sind
+  im Format JJJJ-MM-TT.
+  
+- Daten über die Monde von Planeten unseres Sonnensystems sind
+  unter 'Planeten_Daten'.
+
+  Spalten der Dateien:
+  1. Name des Mondes
+  2. Name des Zentralobjektes
+  3. Mittlere Entfernung des Mondes vom Zentralobjekt (in km)
+  4. Umlaufzeit des Mondes um das Zentralobjekt (in Tagen)
