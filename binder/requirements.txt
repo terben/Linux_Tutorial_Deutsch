@@ -8,3 +8,6 @@
 # I do not install both to not confuse users.
 calysto_bash
 #bash_kernel
+
+# python packages that I would like in the docker
+numpy
