@@ -1,0 +1,43 @@
+\documentclass{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+%%%<
+%\usepackage{verbatim}
+%\usepackage[active,tightpage]{preview}
+%\PreviewEnvironment{tikzpicture}
+%\setlength\PreviewBorder{5pt}%
+%%%>
+
+\begin{document}
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!20,
+    text width=4.5em, text badly centered, node distance=4cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+    text width=5em, text centered, rounded corners, minimum
+    height=4em, node distance=4cm]
+\tikzstyle{line} = [draw, ultra thick, -latex']
+
+\begin{tikzpicture}[node distance = 2cm, auto]
+  % Place nodes
+  \node [block] (init) {Schleifen-\\anfang};
+  \node [decision, below of=init] (decide) {Neues Listenelement verfügbar?};
+  \node [block, below of=decide] (stop) {Schleifen-\\ende};
+  \node [block, right of=decide] (block) {Schleifen-\\befehle};
+  % Draw edges
+  \path [line] (init) -- (decide);
+  \path [line] (decide) -- node {nein} (stop);
+  \path [line] (decide) -- node {ja} (block);
+  \path (decide) -- coordinate[midway] (aux) (init);
+  \path [line] (block) |- (aux);
+  % Plottiel
+  \node[anchor=center,align=center,yshift=2em]
+      at (current bounding box.north)
+      {Flussidgramm einer Schleife};
+\end{tikzpicture}
+
+
+\end{document}

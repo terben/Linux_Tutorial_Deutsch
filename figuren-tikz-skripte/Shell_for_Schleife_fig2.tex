@@ -1,0 +1,55 @@
+% Author: Valeria Borodin
+\documentclass[border={5pt 40pt 180pt 130pt}, % left bottom right top
+  svgnames]{standalone}
+%\documentclass{standalone}
+%%%<
+\usepackage{verbatim}
+%%%>
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{listings}
+\definecolor{whitesmoke}{rgb}{0.96, 0.96, 0.96}
+\tikzstyle{every picture}+=[remember picture]
+
+\lstset{%
+  frame            = tb,    % draw frame at top and bottom of code block
+  tabsize          = 1,     % tab space width
+  numbers          = left,  % display line numbers on the left
+  framesep         = 3pt,   % expand outward
+  framerule        = 0.4pt, % expand outward
+  commentstyle     = \color{blue},      % comment color
+  keywordstyle     = \color{green},       % keyword color
+  stringstyle      = \color{darkred},    % string color
+  backgroundcolor  = \color{white}, % backgroundcolor color
+  showstringspaces = false,              % do not mark spaces in
+                                         % strings
+  otherkeywords    = {in},
+}
+\begin{document}
+%
+\begin{lstlisting}[language = bash, numbers = none, escapechar = !,
+    basicstyle = \ttfamily\bfseries, linewidth = .6\linewidth]
+ for!
+   \tikz[baseline] \node [fill=blue!10, anchor=base] (a) {DATEI};
+ !in !
+   \tikz[baseline] \node [fill=red!10, anchor=base] (b) {Jupiter.txt Saturn.txt};!
+ do
+   !
+   \tikz[baseline] \node[fill=orange!10, anchor=base, align=left] (c) {sort -g -k4 \$\{DATEI\} | head -n 1};!
+ done
+\end{lstlisting}
+\begin{tikzpicture}[remember picture, overlay,
+    every edge/.append style = { ->, thick, >=stealth,
+                                  DimGray, dashed, line width = 1pt },
+    every node/.append style = { align = center, minimum height = 10pt},
+                  text width = 2.5cm ]
+  \node [above = .5cm of a,text width = 2.2cm, fill=blue!10, font=\bfseries]
+                             (A) {Schleifen-\\variable};
+  \node [above = .5cm of b,text width = 2.2cm, fill=red!10, font=\bfseries]
+                             (B) {Schleifen-\\liste};
+  \node [below = 1.0cm of c,text width = 3cm, fill=orange!10, font=\bfseries]
+                             (C) {Schleifenbefehle};
+  %
+  \node[above = 4.9cm of c, text width = 6cm] {Struktur der \texttt{for}-Schleife};
+\end{tikzpicture}
+\end{document}
