@@ -1,0 +1,25 @@
+Daten für meine Bachelorarbeit
+==============================
+
+- Unterverzeichnis raw:
+  Rohdaten meiner Beobachtungen
+
+- Unterverzeichnis processed:
+  bearbeitete Version der Daten unter 'raw'
+
+- Datei Beobachtungs_Logdatei.txt:
+  Die Datei listet vorhandene Beobachtungen, die beobachtungszeitpunkte
+   und ihre formale Qualität
+
+- Datei calc_stats.py:
+  Programm zur Berechnung von Statistiken der Beobachtungen
+
+Durchzuführende Tests:
+======================
+
+- Haben wir für jedes Feld (D1-D4) in jeder Konfiguration
+  genügend Beobachtungen (jeweils 10)
+
+- Haben alle bearbeiteten Daten die erwartete Anzahl an Einträgen (100).
+
+- Ist die Statistik aller prozessierten Daten in Ordnung (Mittelwert um 0).
