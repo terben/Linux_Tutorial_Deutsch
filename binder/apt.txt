@@ -6,3 +6,4 @@ lsb-core
 nano
 vim
 emacs
+tree
