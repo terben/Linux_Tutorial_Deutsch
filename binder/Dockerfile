@@ -165,7 +165,7 @@ RUN rm README.md
 # each command:
 RUN echo "" >> .bashrc
 RUN echo "shopt -s histappend" >> .bashrc
-RUN echo "PROMPT_COMMAND="history -a;$PROMPT_COMMAND"" >> .bashrc
+RUN echo "PROMPT_COMMAND="history -a;$PROMPT_COMMAND" >> .bashrc
 
 ENTRYPOINT ["/usr/local/bin/repo2docker-entrypoint"]
 
