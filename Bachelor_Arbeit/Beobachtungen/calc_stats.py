@@ -1,7 +1,7 @@
 # Sehr einfaches Python Programm zur Berechnung von Mittelwert und
 # Standardabweichung einer Textdatei mit einer Zahlenspalte
 #
-# Wir fphren keine wirklichen Tests für die Korrektheit der
+# Wir führen keine wirklichen Tests für die Korrektheit der
 # Eingangsdaten durch.
 
 import sys
