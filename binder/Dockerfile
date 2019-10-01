@@ -161,6 +161,12 @@ RUN rm -rf figuren-tikz-skripte
 RUN rm -rf .git
 RUN rm README.md
 
+# modify .bashrc to immediately modify .bash_history after
+# each command:
+RUN echo "" >> .bashrc
+RUN echo "shopt -s histappend" >> .bashrc
+RUN echo "PROMPT_COMMAND="history -a;$PROMPT_COMMAND"" >> .bashrc
+
 ENTRYPOINT ["/usr/local/bin/repo2docker-entrypoint"]
 
 # Specify the default command to run
