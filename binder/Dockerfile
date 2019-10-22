@@ -159,6 +159,7 @@ USER ${NB_USER}:users
 RUN rm -rf binder
 RUN rm -rf figuren-tikz-skripte
 RUN rm -rf .git
+RUN rm -rf tools
 RUN rm README.md
 
 # modify .bashrc to immediately modify .bash_history after
