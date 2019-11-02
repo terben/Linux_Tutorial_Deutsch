@@ -161,6 +161,8 @@ RUN rm -rf figuren-tikz-skripte
 RUN rm -rf .git
 RUN rm -rf tools
 RUN rm README.md
+RUN rm LICENSE.md
+RUM rm AUTHORS.md
 
 # modify .bashrc to immediately modify .bash_history after
 # each command:
