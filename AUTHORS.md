@@ -17,3 +17,5 @@ Für das sorgfältige Lesen und zahlreiche Verbesserungsvorschläge gebührt mei
 - Dr. Oliver Cordes
 - Laila Linke
 - Prof. Annika Thiel
+
+Für Hilfe bei der technischen Umsetzung und der Erstellung der Dockerdatei bedanke ich mich herzlich bei Dr. Oliver Cordes.
