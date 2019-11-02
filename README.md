@@ -3,7 +3,7 @@
 **Bitte lesen Sie dieses README einmal komplett, bevor Sie mit den Materialien arbeiten**.
 
 ## Um was geht es?
-Dies ist ein Online-Begelitkurs zu neinem Buch [Einführung in Unix/Linux für
+Dies ist ein Online-Begelitkurs zu meinem Buch [Einführung in Unix/Linux für
 Naturwissenschaftler](http://www.springer.com/de/book/9783662503003).
 
 <a href="http://www.springer.com/de/book/9783662503003">
@@ -13,7 +13,7 @@ Naturwissenschaftler](http://www.springer.com/de/book/9783662503003).
 
 Der Kurs kann komplett online durchgeführt werden und beinhaltet das
 Grundwissen für die Bedienung eines *Linux*-Systems im
-naturwissenscahftlichen Kontext. Das Hauptaugenmerk des Kurses ist die
+naturwissenschaftlichem Kontext. Das Hauptaugenmerk des Kurses ist die
 Automatisierung von Prozessen (z.B. die Analyse vieler Datensätze) und
 die Reproduzierbarkeit wissenschaftlicher Ergebnisse.
 
