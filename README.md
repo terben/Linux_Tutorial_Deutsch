@@ -46,6 +46,6 @@ der acht Lektionen zu kommen:
 
 6. [Lektion 05: Schleifen: Wie kann ich dieselben Operationen auf viele verschiedene Dateien anwenden?](https://binderhub.astro.uni-bonn.de/v2/gh/terben/Linux_Tutorial_Deutsch/master?urlpath=tree/05_Shell_for_Schleife.ipynb)
 
-7. [Lektion 06: Shell-Skripte: Wie kann ich mir Kommandos merken und später wieder ausführen](https://binderhub.astro.uni-bonn.de/v2/gh/terben/Linux_Tutorial_Deutsch/master?urlpath=tree/06_Shell_Shell-Skripte.ipynb)
+7. [Lektion 06: Shell-Skripte: Wie kann ich mir Kommandos merken und später wieder ausführen?](https://binderhub.astro.uni-bonn.de/v2/gh/terben/Linux_Tutorial_Deutsch/master?urlpath=tree/06_Shell_Shell-Skripte.ipynb)
 
-8. [Lektion 07: Wie kann ich Inhalte in Dateien finden und in Unix-Programmen verwenden](https://binderhub.astro.uni-bonn.de/v2/gh/terben/Linux_Tutorial_Deutsch/master?urlpath=tree/07_Shell_Dateiinhalte_finden_und_nutzen.ipynb)
+8. [Lektion 07: Wie kann ich Inhalte in Dateien finden und in Unix-Programmen verwenden?](https://binderhub.astro.uni-bonn.de/v2/gh/terben/Linux_Tutorial_Deutsch/master?urlpath=tree/07_Shell_Dateiinhalte_finden_und_nutzen.ipynb)
